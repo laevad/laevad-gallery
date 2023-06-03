@@ -39,7 +39,7 @@ export const Signup = () => {
 									<label className="label">
 										<span className="label-text">Email</span>
 									</label>
-									<input type="text" placeholder="email" className="input input-bordered" value={email} onChange={(e) => setEmail(e.target.value)}
+									<input type="email" placeholder="email" className="input input-bordered" value={email} onChange={(e) => setEmail(e.target.value)}
 									/>
 								</div>
 								<div className="form-control">
