@@ -1,10 +1,14 @@
+import {Route, Routes} from "react-router-dom";
+import {Home} from "./pages/Home.tsx";
+import {Signup} from "./pages/Signup.tsx";
+
 function App() {
 
   return (
-    <>
-     <h1>App</h1>
-        <button className="btn btn-neutral">Neutral</button>
-    </>
+   <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/signup" element={<Signup/>} />
+   </Routes>
   )
 }
 
