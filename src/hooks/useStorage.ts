@@ -28,10 +28,11 @@ export const useStorage = () => {
             () => {
                 getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
                     setUrl(downloadURL);
+                    setProgress(0);
                 });
             }
         );
     }
 
-    return { progress, error, url, startUpload };
+    return { progress, error, startUpload };
 };
