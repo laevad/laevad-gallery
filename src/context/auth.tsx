@@ -33,6 +33,7 @@ export const AuthProvider : FC<AuthProviderProps> =
         return unsubscribe;
     }
     , []);
+
     const value = {user, isLoading};
 
     return (
