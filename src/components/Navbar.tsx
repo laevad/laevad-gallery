@@ -3,8 +3,8 @@ export const Navbar = () => {
 		<>
 			<div>
 				<div className="navbar bg-base-100 justify-between">
-					<a className="font-bold normal-case text-xl underline">
-						Laevad Gallery
+					<a className="font-bold normal-case text-xl">
+						Laevad Gallery <span>📷</span>
 					</a>
 					<button>
 						Logout
