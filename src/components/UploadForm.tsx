@@ -1,7 +1,9 @@
 import React, {useState} from "react";
+import {useStorage} from "../hooks/useStorage.ts";
 
 export const UploadForm = () => {
 	const [selectedFile, setSelectedFile] = useState<File | null>(null)
+	const { startUpload } = useStorage();
 
 	const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		if (e.target.files && e.target.files[0]) {
@@ -13,6 +15,7 @@ export const UploadForm = () => {
 		e.preventDefault();
 		if (selectedFile) {
 			// upload file
+			startUpload(selectedFile);
 		}
 		setSelectedFile(null);
 	}
